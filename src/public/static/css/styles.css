@@ -1,0 +1,32 @@
+header {
+    display: flex; 
+    justify-content: space-between; /* Coloca los elementos a los extremos */
+    align-items: center; /* Centra verticalmente los elementos */
+    padding: 10px 20px;
+    background-color: #f4f4f4;
+    border-bottom: 2px solid #ddd;
+}
+
+
+.cuerpo-principal{
+    height: auto;
+    text-align: center;
+   
+}
+
+#logo{
+    background-color: aqua;
+}
+
+#imagen-logo{
+    
+    height: auto;
+    width: 200px;
+    
+}
+
+#navegador{
+    background-color: aqua;
+    display: flex ;
+    gap: 20px;
+}
