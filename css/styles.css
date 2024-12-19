@@ -14,9 +14,11 @@ header {
     
 }
 
+
 #logo{
     background-color: aqua;
 }
+
 
 #imagen-logo{
 
@@ -44,6 +46,6 @@ h1{
 
 h1::content{
 
-    text-decoration: rgb(13, 192, 13);
+   text-decoration: rgb(13, 192, 13);
    text-decoration-color: seagreen ;
 }
