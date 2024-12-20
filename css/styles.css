@@ -44,8 +44,11 @@ h1{
    text-decoration-color: seagreen ;
 }
 
-h1::content{
 
-   text-decoration: rgb(13, 192, 13);
-   text-decoration-color: seagreen ;
+
+.section-servicios img{
+    height: auto;
+    width: 17rem;
+    border-radius: 1rem;
+
 }
