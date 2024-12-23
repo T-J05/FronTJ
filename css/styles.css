@@ -21,21 +21,24 @@ header {
 }
 @media screen and (max-width: 768px) {
     header {
-      flex-direction: column;
+      flex-direction: row;
       gap: 1rem; /* Espacio entre logo y menú */
     }
   
     #navegador {
-      flex-direction: column; /* Apilar enlaces */
+      flex-direction: row; /* Apilar enlaces */
       width: 100%; /* Asegura que ocupe todo el contenedor */
       align-items: center; /* Centra los elementos */
+      justify-content: center;
     }
   
     #navegador a {
       
-      font-size: 1.4rem; /* Tamaño mayor para pantallas pequeñas */
+      font-size: 1.5rem; /* Tamaño mayor para pantallas pequeñas */
     }
-  
+    #imagen-logo{
+        display: none;
+    }
    
   }
 
@@ -75,8 +78,9 @@ header {
     header{
         height: 10rem;
     }
-    #navegador a {
-      font-size: 2.3rem; /* Ajustar el tamaño del texto */
+    #navegador .active {
+      color:#00ff11
+       /* Ajustar el tamaño del texto */
     }
   }
 
@@ -97,14 +101,17 @@ img{
 }
 
 .navegador-class  a{
-
     border:none;
     text-decoration: none;
-    color: #d0d2ff;
     font-family: 'Quicksand',sans-serif;
     font-size: 2.5rem;;
     font-weight: normal;
 }
+
+.active{
+    color: #00ff11;
+}
+
 
 
 h1,h2,h3{
@@ -181,7 +188,7 @@ p,a,legend,input{
     display: flex;
     width: 15rem; /* Ancho deseado */
     height:  23rem;/* Alto deseado */
-    object-fit: cover; /* Ajusta la imagen para que llene el espacio */
+    object-fit: cover; 
     border-radius: 1rem;
     justify-content: space-around; 
    
