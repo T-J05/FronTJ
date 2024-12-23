@@ -1,54 +1,343 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  
+html {
+    font-size: 100%;  
+}
+
+
 header {
-    display: flex; 
+    min-height: 6rem; /* Altura mínima garantizada */
+    height: auto; /* Permite que crezca según el contenido */
+}
+@media screen and (max-width:  768px) {
+    html{ font-size: 50.25%;
+    }
+   
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        max-height: none;
+        height: auto;
+        flex-direction: column; /* Apila los elementos del header */
+        align-items: flex-start; /* Alinea los elementos al inicio */
+        
+    }
+
+    .navegador-class li{
+        
+        flex-direction: column; /* Apila las opciones del menú */
+        gap: 1rem; /* Espacio entre los enlaces */
+        align-items: center;
+        
+    }
+
+    .navegador-class a {
+        font-size: 1.4rem; /* Reduce el tamaño de la fuente */
+
+    }
+}
+
+#imagen-logo {
+    max-width: 100%;
+    height: auto;     
+    width: auto;      
+    max-height: 20rem; 
+}
+
+
+header {
+    display: flex;
+    height: auto;
+    max-height: 5rem;
+    overflow: hidden;
     justify-content: space-evenly; 
     align-items: center; 
-    padding: 10px 20px;
-    background-color: #f4f4f4;
-    border-bottom: 3px solid #ddd;
+    padding: 1rem 3rem;
+    background-color: #0d0083;
+    border-bottom: 0.3rem solid #000000;
 }
 
 
 .cuerpo-principal{
+    padding: 1rem;
+    font-family: 'Quicksand',sans-serif;
+    font-size: medium;
     height: auto;
     text-align: center;
-    
 }
 
 
-#logo{
-    background-color: aqua;
+img{
+    max-width: 100%;
+    height: auto;
 }
 
-
-#imagen-logo{
-
-    height: 250px;
-    width: auto;
-    
-}
 
 #navegador{
-    background-color: aqua;
     display: flex ;
-    gap: 20px;
+    gap: 6rem;
+    list-style: none;
+    padding: 0%;
+    margin: 0%;
+    
 }
 
-.proveedor img{
-    height: auto;
-    height: 300px;
+.navegador-class  a{
+    border: none; /* Elimina el borde */
+    text-decoration: none;
+    color: #00022b;
+    font-family: 'Quicksand',sans-serif;
+    font-size: 2.5rem;;
+    font-weight: normal;
 }
 
-h1{
-   text-align: center;
-   text-decoration: rgb(13, 192, 13);
-   text-decoration-color: seagreen ;
+
+h1,h2,h3{
+    
+    font-family: 'Quicksand',sans-serif;
+    font-size: medium;
+    text-align: center;
+}
+
+.todos{
+    color:#00bd06
+}
+.titleCute{
+        color: #5cd160;
+        padding: 0.5rem;
+        font-family: 'Quicksand',sans-serif;
+        font-size: 3.6rem; /* Tamaño de la fuente (ajústalo como desees) */
+        font-weight: 600; /* Si necesitas cambiar el peso */
+    }
+
+
+p,a,legend,input{
+    font-family: 'Quicksand',sans-serif;
+    text-align: center;
+    font-size: 1.5rem;
 }
 
 
+.section-servicios h3{
+    padding: 2%;
+    font-size: 1rem;
+    display: flex;
+    gap: 3rem;
+    justify-content: space-around; 
+}
+
+.section-servicios{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;  
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.section-servicios p,a{
+    font-size: 1.2rem;
+   
+}
+.section-servicios a{
+    border: none; /* Elimina el borde */
+    text-decoration: none;
+    color: rgb(33, 114, 17);
+    
+}
+#nuestrosE{
+    font-size: 2rem;
+}
+
+.section-servicios div{
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* Centra el contenido dentro de cada div */
+    text-align: center;   /* Centra el texto dentro de cada div */
+    width: 18rem;  /* Un tamaño fijo para cada servicio */
+    margin-bottom: 2rem;  /* Espacio en la parte inferior */
+}
+
+.section-servicios h3{
+    font-size: 1.6rem;
+}
 
 .section-servicios img{
-    height: auto;
-    width: 17rem;
+    display: flex;
+    width: 15rem; /* Ancho deseado */
+    height:  23rem;/* Alto deseado */
+    object-fit: cover; /* Ajusta la imagen para que llene el espacio */
     border-radius: 1rem;
-
+    justify-content: space-around; 
+   
 }
+
+/* Profesional (Proveedor) */
+main {
+    padding: 1rem;
+  }
+
+
+  #profesionales {
+    text-align: center;
+    font-size: 3.6rem;
+    margin-bottom: 2rem;
+    color: #333;
+  }
+  
+  /* Estilos para los títulos de las categorías */
+  #proveedores > h2 {
+    color: #5cd160;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #042960;
+    padding-bottom: 0.5rem;
+    text-align: center;
+  }
+  
+  /* Contenedor principal de las tarjetas */
+  #proveedores {
+    display: grid;
+    flex-wrap: wrap; /* Permite que las tarjetas pasen a la siguiente fila si no caben */
+    justify-content: space-around; /* Centra las tarjetas horizontalmente */
+    gap: 2rem; /* Espaciado entre las tarjetas */
+  }
+  
+
+  #proveedores > div.proveedor {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 1rem;
+    width: 40rem;
+    gap: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  #proveedores > div.proveedor img {
+    width: 12rem;
+    height: 16rem;
+    object-fit: cover;
+  }
+  
+  #proveedores > div.proveedor p {
+    margin-top: 1rem;
+    font-size: 1rem;
+  }
+  
+  #proveedores > div.proveedor .contacto a {
+    color: #4CAF50;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+ i
+
+  form {
+   
+    width: 90%; /* Ocupa el 90% del ancho de la pantalla */
+    max-width: 30rem; /* Ancho máximo del formulario */
+    padding: 2rem;
+    background-color: #ffffff; /* Fondo blanco */
+    border: 1px solid #ccc; /* Borde ligero */
+    border-radius: 0.5rem; /* Bordes redondeados */
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+
+form button{
+    display: block;
+    color: #000000;
+    background-color: #fff;
+    width: 30rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem; /* Espaciado inferior */
+    text-align: center;
+    border: 2px solid #ccc; /* Borde del input */
+    border-radius: 0.3rem; /* Bordes redondeados */
+    box-sizing: border-box;
+}
+
+/* Centrado de los elementos del formulario */
+form fieldset {
+    border: none; /* Elimina el borde del fieldset */
+    padding: 0;
+    margin: 0;
+}
+
+form legend {
+    font-size: 1.6rem; /* Tamaño de fuente */
+    font-weight: bold;
+    margin-bottom: 1rem; /* Espaciado inferior */
+    text-align: center;
+}
+
+form label {
+
+    display: block; /* Asegura que el label esté en una nueva línea */
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem; /* Espacio entre el label y el input */
+}
+
+form input {
+    width: 100%; /* El input ocupa todo el ancho */
+    padding: 0.8rem; /* Espaciado interno */
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem; /* Espacio inferior entre campos */
+    border: 1px solid #ccc; /* Borde del input */
+    border-radius: 0.3rem; /* Bordes redondeados */
+    box-sizing: border-box;
+}
+
+form input:focus {
+    border-color: #007BFF; /* Cambia el color del borde al enfocar */
+    outline: none; /* Elimina el contorno */
+    box-shadow: 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+ 
+.unete-main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.title-unete{
+    font-size: 2.5rem;
+}
+
+
+/* Responsivo */
+@media screen and (max-width: 768px) {
+    form {
+        padding: 1.5rem; /* Reduce el padding en pantallas pequeñas */
+    }
+
+    form legend {
+        font-size: 1.4rem; /* Reduce el tamaño del título */
+    }
+
+    form input {
+        font-size: 1rem; /* Reduce el tamaño de los inputs */
+    }
+}
+
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 0.4rem;
+    background-color: #00022b;
+    color: white;
+    margin-top: 1rem;
+  }
