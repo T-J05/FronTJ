@@ -19,29 +19,25 @@ header {
     }
    
 }
-
 @media screen and (max-width: 768px) {
     header {
-        max-height: none;
-        height: auto;
-        flex-direction: column; /* Apila los elementos del header */
-        align-items: flex-start; /* Alinea los elementos al inicio */
-        
+      flex-direction: column;
+      gap: 1rem; /* Espacio entre logo y menú */
     }
-
-    .navegador-class li{
-        
-        flex-direction: column; /* Apila las opciones del menú */
-        gap: 1rem; /* Espacio entre los enlaces */
-        align-items: center;
-        
+  
+    #navegador {
+      flex-direction: column; /* Apilar enlaces */
+      width: 100%; /* Asegura que ocupe todo el contenedor */
+      align-items: center; /* Centra los elementos */
     }
-
-    .navegador-class a {
-        font-size: 1.4rem; /* Reduce el tamaño de la fuente */
-
+  
+    #navegador a {
+      
+      font-size: 1.4rem; /* Tamaño mayor para pantallas pequeñas */
     }
-}
+  
+   
+  }
 
 #imagen-logo {
     max-width: 100%;
@@ -53,17 +49,17 @@ header {
 
 header {
     display: flex;
-    height: auto;
-    max-height: 5rem;
-    overflow: hidden;
-    justify-content: space-evenly; 
-    align-items: center; 
-    padding: 1rem 3rem;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #0d0083;
+    border-bottom: 2px solid black;
+    padding: 1rem;
+    width: 100%;
+    box-sizing: border-box; /* Incluye márgenes y relleno */
+    overflow: hidden; 
     background-color: #0d0083;
     border-bottom: 0.3rem solid #000000;
 }
-
-
 .cuerpo-principal{
     padding: 1rem;
     font-family: 'Quicksand',sans-serif;
@@ -71,6 +67,18 @@ header {
     height: auto;
     text-align: center;
 }
+
+@media screen and (min-width: 1200px) {
+    .logo img {
+      max-width: 20rem; /* Logo más grande en pantallas grandes */
+    }
+    header{
+        height: 10rem;
+    }
+    #navegador a {
+      font-size: 2.3rem; /* Ajustar el tamaño del texto */
+    }
+  }
 
 
 img{
@@ -89,9 +97,10 @@ img{
 }
 
 .navegador-class  a{
-    border: none; /* Elimina el borde */
+
+    border:none;
     text-decoration: none;
-    color: #00022b;
+    color: #d0d2ff;
     font-family: 'Quicksand',sans-serif;
     font-size: 2.5rem;;
     font-weight: normal;
