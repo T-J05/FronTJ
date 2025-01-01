@@ -4,18 +4,21 @@
     box-sizing: border-box;
   }
 
-  
 html {
-    font-size: 100%;  
+    font-size: 100%; 
+    line-height: 1.7;
+    background-color: #ffffff;
+    letter-spacing: 0.1rem;
 }
-
 
 header {
     min-height: 6rem; /* Altura mínima garantizada */
     height: auto; /* Permite que crezca según el contenido */
 }
+
 @media screen and (max-width:  768px) {
     html{ font-size: 50.25%;
+      
     }
    
 }
@@ -24,21 +27,27 @@ header {
       flex-direction: row;
       gap: 1rem; /* Espacio entre logo y menú */
     }
-  
     #navegador {
+      
       flex-direction: row; /* Apilar enlaces */
       width: 100%; /* Asegura que ocupe todo el contenedor */
       align-items: center; /* Centra los elementos */
-      justify-content: center;
+      justify-content:space-between;
+      
     }
   
     #navegador a {
-      
-      font-size: 1.5rem; /* Tamaño mayor para pantallas pequeñas */
+      font-weight: 400;
+      font-size: 1.7rem; /* Tamaño mayor para pantallas pequeñas */
     }
-    #imagen-logo{
-        display: none;
+    #imagen-logo {
+        max-width: 70%; /* Reduce el tamaño de la imagen */
+        height: auto;
+        margin-bottom: 1rem;
+        
     }
+
+  
    
   }
 
@@ -54,21 +63,24 @@ header {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    background-color: #0d0083;
-    border-bottom: 2px solid black;
     padding: 1rem;
+    height: 7vh;
     width: 100%;
-    box-sizing: border-box; /* Incluye márgenes y relleno */
+    box-sizing: border-box; 
     overflow: hidden; 
-    background-color: #0d0083;
+    background-color:  #003366;
+
     border-bottom: 0.3rem solid #000000;
 }
 .cuerpo-principal{
     padding: 1rem;
     font-family: 'Quicksand',sans-serif;
+    word-spacing: 0.3rem;
+    font-weight: 500;
     font-size: medium;
     height: auto;
-    text-align: center;
+    text-align: center;  
+    
 }
 
 @media screen and (min-width: 1200px) {
@@ -103,19 +115,26 @@ img{
 .navegador-class  a{
     border:none;
     text-decoration: none;
+    letter-spacing: 0.4rem;
     font-family: 'Quicksand',sans-serif;
-    font-size: 2.5rem;;
-    font-weight: normal;
+    font-size: 1.5rem;
+
+    font-weight: 500;
+    color:#5cd160
+    
 }
 
-.active{
-    color: #00ff11;
-}
 
+
+ li.active{
+    
+    border-radius: 0.3rem;
+    border: 0.1rem solid #332294;
+}
 
 
 h1,h2,h3{
-    
+    color: #5cd160;
     font-family: 'Quicksand',sans-serif;
     font-size: medium;
     text-align: center;
@@ -124,11 +143,13 @@ h1,h2,h3{
 .todos{
     color:#00bd06
 }
+
+
 .titleCute{
         color: #5cd160;
         padding: 0.5rem;
         font-family: 'Quicksand',sans-serif;
-        font-size: 3.6rem; /* Tamaño de la fuente (ajústalo como desees) */
+        font-size: 3rem; /* Tamaño de la fuente (ajústalo como desees) */
         font-weight: 600; /* Si necesitas cambiar el peso */
     }
 
@@ -141,37 +162,43 @@ p,a,legend,input{
 
 
 .section-servicios h3{
+    
     padding: 2%;
     font-size: 1rem;
     display: flex;
     gap: 3rem;
     justify-content: space-around; 
+   
 }
 
 .section-servicios{
+   
+    border: 0.1rem solid #0a0044;
+    background-color: #a2fb9e92;
+    border-radius: 2rem;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
+   
     gap: 2rem;  
     flex-wrap: wrap;
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
+
+
 
 .section-servicios p,a{
     font-size: 1.2rem;
    
 }
-.section-servicios a{
-    border: none; /* Elimina el borde */
-    text-decoration: none;
-    color: rgb(33, 114, 17);
-    
-}
+
 #nuestrosE{
+    
     font-size: 2rem;
 }
 
 .section-servicios div{
-  
+    
+    
     display: flex;
     flex-direction: column;
     align-items: center;  /* Centra el contenido dentro de cada div */
@@ -181,10 +208,12 @@ p,a,legend,input{
 }
 
 .section-servicios h3{
+    color: #003366;
     font-size: 1.6rem;
 }
 
 .section-servicios img{
+    border: 0.1rem solid #0a0044;
     display: flex;
     width: 15rem; /* Ancho deseado */
     height:  23rem;/* Alto deseado */
@@ -197,19 +226,21 @@ p,a,legend,input{
 /* Profesional (Proveedor) */
 main {
     padding: 1rem;
+   
   }
 
 
-  #profesionales {
+#profesionales {
+    font-weight: 600;
     text-align: center;
-    font-size: 3.6rem;
+    font-size: 3rem;
     margin-bottom: 2rem;
-    color: #333;
   }
   
   /* Estilos para los títulos de las categorías */
-  #proveedores > h2 {
-    color: #5cd160;
+#proveedores > h2 {
+    letter-spacing: 0.1rem;
+    color: #003366;
     font-size: 2.5rem;
     margin-bottom: 1rem;
     border-bottom: 2px solid #042960;
@@ -223,15 +254,18 @@ main {
     flex-wrap: wrap; /* Permite que las tarjetas pasen a la siguiente fila si no caben */
     justify-content: space-around; /* Centra las tarjetas horizontalmente */
     gap: 2rem; /* Espaciado entre las tarjetas */
+   
   }
   
 
   #proveedores > div.proveedor {
+   
     display: flex;
     flex-direction: row;
     align-items: center;
-    background-color: #fff;
-    border: 1px solid #ccc;
+    background-color: #f2f2f2;
+   
+    border: 1px solid #22202084;
     border-radius: 8px;
     padding: 1rem;
     width: 40rem;
@@ -257,17 +291,14 @@ main {
     text-decoration: none;
   }
   
- i
 
-  form {
-   
-    width: 90%; /* Ocupa el 90% del ancho de la pantalla */
-    max-width: 30rem; /* Ancho máximo del formulario */
+
+form {
+    
+    border-radius: 1rem;
+    width: 50%; /* Ocupa el 90% del ancho de la pantalla */
     padding: 2rem;
-    background-color: #ffffff; /* Fondo blanco */
-    border: 1px solid #ccc; /* Borde ligero */
-    border-radius: 0.5rem; /* Bordes redondeados */
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.377); /* Sombra ligera */
 }
 
 
@@ -275,7 +306,7 @@ form button{
     display: block;
     color: #000000;
     background-color: #fff;
-    width: 30rem;
+    width: 10rem;
     font-size: 1.2rem;
     font-weight: bold;
     margin-bottom: 1rem; /* Espaciado inferior */
@@ -290,17 +321,18 @@ form fieldset {
     border: none; /* Elimina el borde del fieldset */
     padding: 0;
     margin: 0;
+    
 }
 
 form legend {
-    font-size: 1.6rem; /* Tamaño de fuente */
+    font-size: 1.4rem; /* Tamaño de fuente */
     font-weight: bold;
     margin-bottom: 1rem; /* Espaciado inferior */
     text-align: center;
 }
 
 form label {
-
+    font-family:'Quicksand',sans-serif;
     display: block; /* Asegura que el label esté en una nueva línea */
     font-size: 1.2rem;
     margin-bottom: 0.5rem; /* Espacio entre el label y el input */
@@ -310,10 +342,11 @@ form input {
     width: 100%; /* El input ocupa todo el ancho */
     padding: 0.8rem; /* Espaciado interno */
     font-size: 1.2rem;
-    margin-bottom: 1.5rem; /* Espacio inferior entre campos */
+    margin-bottom: 1rem; /* Espacio inferior entre campos */
     border: 1px solid #ccc; /* Borde del input */
     border-radius: 0.3rem; /* Bordes redondeados */
     box-sizing: border-box;
+    text-align: left;
 }
 
 form input:focus {
@@ -323,13 +356,14 @@ form input:focus {
 }
  
 .unete-main{
+    padding: 1rem ;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     height: 100vh;
 }
 .title-unete{
+    padding: 2rem;
     font-size: 2.5rem;
 }
 
@@ -356,4 +390,5 @@ form input:focus {
     background-color: #00022b;
     color: white;
     margin-top: 1rem;
+    
   }

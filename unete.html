@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">  <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="css/styles.css">
     <title>Unete a Nosotros</title>
 </head>
@@ -11,22 +11,27 @@
     <header>
         <a href="index.html" class="logo">
           <img src="static/images/logo.png" alt="Logo principal" id="imagen-logo">
-      </a>
+        </a>
         <nav>
           <ul id="navegador" class="navegador-class">
             <li><a href="index.html">Inicio</a></li>
             <li><a href="proveedores.html">Profesionales</a></li>
-            <li><a href="unete.html">Únete a Nosotros</a></li>
+            <li class="active"><a href="unete.html">Únete a Nosotros</a></li>
           </ul>
         </nav>
       </header>
+
       <h1 class="title-unete">Únete al equipo de WorKi</h1>
+      
       <p>
-        Donde podrás promocionar tus servicios y encontrar nuevos clientes de forma
-        centralizada y sergura.
+        Donde podrás promocionar tus servicios y encontrar nuevos <br> clientes de forma
+        centralizada y segura.
       </p>
-    <main class="unete-main">
-        <form action="/submit" method="POST" id="form-unete" class="formulario">
+
+    <main >
+
+      <section class="unete-main">
+        <form  id="form-unete" class="formulario">
           <fieldset>
               <legend>Datos requeridos</legend>
               
@@ -48,13 +53,13 @@
               <button type="submit">Enviar</button>
           </fieldset>
       </form>
-      
+    </section>
+
     </main>
+
+    <footer>
+      <p>&copy; 2024 WarKi S.A</p>
+    </footer>
+
 </body>
-
- 
-<footer>
-  <p>&copy; 2024 WarKi S.A</p>
-</footer>
-
 </html>
